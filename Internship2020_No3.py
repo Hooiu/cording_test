@@ -8,7 +8,7 @@
 # 5. len(set(T)) < len(set(T[start:end])) 이경우는 없음!!!
 # 6. if end > len(T) | start > len(T)이면 끝!!
 
-T = ["DIA", "DIA", "RUBY", "DIA", "DIA", "EMERALD", "SAPPHIRE","HANA"]
+T = ["DIA", "DIA", "RUBY", "DIA", "DIA", "EMERALD", "SAPPHIRE","HANA","HOON"]
 def solution(gems):
     start = 0
     end = 0
