@@ -9,22 +9,24 @@
 # 6. if end > len(T) | start > len(T)이면 끝!!
 
 T = ["DIA", "DIA", "RUBY", "DIA", "DIA", "EMERALD", "SAPPHIRE","HANA"]
-def solution(gems):
+def solution(T):
     start = 0
     end = 0
+    temp_len = len(T)
     result_list = []
     diff_list = []
+    length_T = len(set(T))
 
     while start <= len(T) and end <= len(T):
-        if len(set(T)) == len(set(T[start:end+1])):
+        if length_T == len(set(T[start:end+1])):
             result_list.append([start+1,end+1])
             start += 1
+            temp_len = end - start
         else:
             end += 1
+            if temp_len <= end - start: start += 1
 
-    for i in result_list:
-        diff_list.append(i[1]-i[0])
 
-    return(result_list[diff_list.index(min(diff_list))])    
+    return(result_list[-1])    
 
 print(solution(T))
