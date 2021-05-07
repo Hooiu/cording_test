@@ -19,9 +19,42 @@
 
 # print(result_list)
 
-A = 2.0
-B = 2
+# A = 2.0
+# B = 2
 
-print(type(A), type(B))
-if A == B:
-    print("int와 float 비교 가능하네!")
+# print(type(A), type(B))
+# if A == B:
+#     print("int와 float 비교 가능하네!")
+
+
+# print([i for i in range(3)])
+
+
+def solution(v):
+    answer = []
+    x_list = []
+    y_list = []
+    x = 0
+    y = 0
+    for i in v:
+        x_list.append(i[0])
+        y_list.append(i[1])
+    if x[0] == x[1]:
+        x = x[2]
+    elif x[0] == x[2]:
+        x = x[1]
+    elif x[1] == x[2]:
+        x = x[0]
+    
+    if y[0] == y[1]:
+        y = y[2]
+    elif y[0] == y[2]:
+        y = y[1]
+    elif y[1] == y[2]:
+        y = y[0]
+    
+    answer = [x,y]
+
+    return answer
+
+print(solution([[1, 4], [3, 4], [3, 10]]))
