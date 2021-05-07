@@ -21,3 +21,4 @@ column = 0
 
 while low == len(board) and column == len(board[-1]):
     
+    
