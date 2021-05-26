@@ -11,14 +11,6 @@ places = [["POOOP","OXXOX","OPXPX","OOXOX","POXXP"],
 
 import numpy as np
 
-# place0 = np.array(list(map(list,places[0])), dtype=str)
-# place1 = np.array(list(map(list,places[1])), dtype=str)
-# place2 = places[2]
-# place3 = places[3]
-# place4 = places[4]
-
-# print(place0)
-
 def extend_arr(arr):
     upper_lower_row = np.array([['O','O','O','O','O'],['O','O','O','O','O']])
     place_extended = np.vstack((upper_lower_row,arr,upper_lower_row))
@@ -61,17 +53,4 @@ def solution(places):
         else:
             result.append(0)
     return result
-    # print(place0)
-    # # print(extend_arr(place0))
-    # return(distance_decision(extend_arr(place0)))
-
-    # # places_new = [place0, place1, place2, place3, place4]
-    # # result=[]
-    # # for place in places_new:
-    # #     if distance_decision(place):
-    # #         result.append(1)
-    # #     else:
-    # #         result.append(0)
-    # # return result
-
 print(solution(places))
